@@ -1,8 +1,8 @@
 // from data.js
-// var tableData = data;
+var tableData = data;
 
 var tbody = d3.select("tbody");
-let table = d3.select("")
+let table = d3.select("table");
 
 // inserting table into the the page
 tableData.forEach(item => {
@@ -16,4 +16,10 @@ tableData.forEach(item => {
     let duration = row.append("td");
     let comments = row.append("td");
     date.text(item.datetime);
+    city.text(item.city);
+    state.text(item.state);
+    country.text(item.country);
+    shape.text(item.shape);
+    duration.text(item.durationMinutes);
+    comments.text(item.comments);
 })
