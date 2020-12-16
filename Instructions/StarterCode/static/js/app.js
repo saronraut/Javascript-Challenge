@@ -23,3 +23,17 @@ tableData.forEach(item => {
     duration.text(item.durationMinutes);
     comments.text(item.comments);
 })
+
+
+// select the button and form
+var button = d3.select("#filter-btn");
+var form = d3.select("form");
+
+// creating an event handlers
+button.on("click",runEnter);
+form.on("submit",runEnter);
+
+// complete the even handler function for the form
+function runEnter() {
+    
+}
