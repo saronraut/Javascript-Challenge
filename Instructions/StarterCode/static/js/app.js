@@ -51,16 +51,6 @@ function runEnter() {
     // filter out the Data based on the input
     let newData = tableData.filter(item => item.datetime === inputValue)
     tbody.selectAll("tr").data(newData).enter().append().text(item =>{
-    // DID NOT WORK ,all of the data were only populating in first column
-        // return `${item.datetime}
-        // ${item.city}
-        // ${item.state}
-        // ${item.country}
-        // ${item.shape}
-        // ${item.durationMinutes}
-        // ${item.comments}`
-    // So we knew it was working and first function gave us the table so I just took the code that gave the table but with filtered
-    // Short cut would've been setting it into variable and returning the variable. But don't want to break it
     let row = tbody.append("tr");
     let date = row.append("td");
     let city = row.append("td");
@@ -77,6 +67,16 @@ function runEnter() {
     duration.text(item.durationMinutes);
     comments.text(item.comments);
     
+     // DID NOT WORK ,all of the data were only populating in first column
+        // return `${item.datetime}
+        // ${item.city}
+        // ${item.state}
+        // ${item.country}
+        // ${item.shape}
+        // ${item.durationMinutes}
+        // ${item.comments}`
+    // So we knew it was working and first function gave us the table so I just took the code that gave the table but with filtered
+    // Short cut would've been setting it into variable and returning the variable. But don't want to break it
     })
 
 
