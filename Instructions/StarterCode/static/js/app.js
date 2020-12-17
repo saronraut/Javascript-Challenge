@@ -44,13 +44,15 @@ function runEnter() {
     // empty out the table body
     tbody.html("")
     let newData = tableData.filter(item => item.datetime === inputValue)
-    // tbody.selectAll("tr").data(newData).enter().append("tr").text(item => {
-    //     `${item.datetime}`
-    // })
-
-    let tbody = document.querySelector("tbody")
-    newData.map(item => {
-        tbody.innerHTML += `
-        ${item.datetime}`
+    tbody.selectAll("tr").data(newData).enter().append("tr").text(item =>{
+        return `${item.datetime}
+        ${item.city}
+        ${item.state}
+        ${item.country}
+        ${item.shape}
+        ${item.durationMinutes}
+        ${item.comments}`
+        
     })
+   
 }
