@@ -35,5 +35,22 @@ form.on("submit",runEnter);
 
 // complete the even handler function for the form
 function runEnter() {
-    
+    // select the input element
+    let inputElement =d3.select("#datetime")
+
+    // Get the value property of the input element
+    let inputValue = inputElement.property("value")
+
+    // empty out the table body
+    tbody.html("")
+    let newData = tableData.filter(item => item.datetime === inputValue)
+    // tbody.selectAll("tr").data(newData).enter().append("tr").text(item => {
+    //     `${item.datetime}`
+    // })
+
+    let tbody = document.querySelector("tbody")
+    newData.map(item => {
+        tbody.innerHTML += `
+        ${item.datetime}`
+    })
 }
