@@ -1,7 +1,7 @@
 # Javascript-Challenge
 
 
-The JavaScript challenege was to display our knowledge in JS and DOM Manipulation. In the html page, we had to display the table of UFO sighting and create a filter button which allows you to filter table by date of sighting.
+The JavaScript challenge was to display our knowledge in JS and DOM Manipulation. In the html page, we had to display the table of UFO sighting and create a filter button which allows you to filter table by date of sighting.
 
  /Instruction/ Folder contains all the code that was worked on for this assignment. 
 
