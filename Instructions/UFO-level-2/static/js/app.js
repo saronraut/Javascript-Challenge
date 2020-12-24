@@ -5,9 +5,10 @@ var tbody = d3.select("tbody");
 let table = d3.select("table");
 
 // inserting table into the the page
+// made the table creation into a function, to help shorten the code for filtering
 function buildtable(data) {
+    // to refresh the table, so filter data or changed data wouldn't populate on top of the older table
   tbody.html("");
-
   data.forEach((item) => {
     // console.log(item)
     let row = tbody.append("tr");
@@ -28,7 +29,7 @@ function buildtable(data) {
   });
 }
 
-// Track of all filters
+// Track all of the filters
 var filters = {};
 function updateFilters() {
   var changedElement = d3.select(this).select("input");
@@ -52,6 +53,7 @@ function filterTable() {
 
    /*Loop through all of the filters and keep any data that
    matches the filter values */
+ //   This part of code was provided by the instructor. 
   Object.entries(filters).forEach(([key, value]) => {
     filteredData = filteredData.filter((item) => item[key] === value);
   });
